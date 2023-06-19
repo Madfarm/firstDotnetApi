@@ -99,3 +99,11 @@ and then add this attribute to that class: [ApiController] and also add an attri
 [Route("books")]
 public class BooksController :  ControllerBase
 
+for each of our controller methods we define the Http request type to listen for via attributes added to that method
+example with a GET request:
+
+[HttpGet]
+public IEnumerable<Book> GetBooks()
+
+
+
