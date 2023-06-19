@@ -5,6 +5,8 @@
 > appsettings.Dev  - app config for development
 
 
+
+
 ## Debugging and Running
 Use the run and debug section on vscode
 
@@ -63,4 +65,9 @@ strings are a nullable type so make the compiler happy add = null!; at the end l
 public string Name { get; init; } = null!;
 
 add [Required] attribute from System.ComponentModel.DataAnnotations to make a property required
+
+
+
+## Random C# notes
+When instantiating an object you can just use new() instead of new Collection<type>()
 
