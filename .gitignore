@@ -475,3 +475,8 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+
+# some wack stuff
+openssl-1.1.1h.tar.gz
+openssl-1.1.1h.tar.gz.sha256
