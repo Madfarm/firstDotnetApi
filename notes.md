@@ -59,3 +59,8 @@ public record Item
 
 the init keyword instead of the set keyword means the value can only be set initially and never modified
 
+strings are a nullable type so make the compiler happy add = null!; at the end like so,
+public string Name { get; init; } = null!;
+
+add [Required] attribute from System.ComponentModel.DataAnnotations to make a property required
+
