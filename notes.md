@@ -43,3 +43,8 @@ final result:
 head to the url with /swagger at the end
 
 Swagger is awesome, can't believe it's bundled
+
+
+## Building
+ctrl + shift + b
+

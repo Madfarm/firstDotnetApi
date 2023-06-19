@@ -36,3 +36,9 @@ final result:
 }
 
 
+
+
+clean up the starter files by deleting,
+WeatherForecast.cs and WeatherForecastController.cs
+
+
