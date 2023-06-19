@@ -81,3 +81,15 @@ names.Where(name => name == "chjris")
 
 .SingleOrDefault() returns the only element in a sequence or a default value if the sequence is empty
 - throws an exception if there is more than one element in the sequence
+
+## Controllers
+first import the Mvc namespace,
+using Microsoft.AspNetCore.Mvc;
+
+then create a namespace, following naming conventions
+ex: namespace Catalog.Controllers
+
+
+then a class for each controller and this class will implement the ControllerBase interface from the Mvc namespace
+ex: public class BookController : ControllerBase
+
