@@ -93,3 +93,9 @@ ex: namespace Catalog.Controllers
 then a class for each controller and this class will implement the ControllerBase interface from the Mvc namespace
 ex: public class BookController : ControllerBase
 
+and then add this attribute to that class: [ApiController] and also add an attribute specifying the route: [Route("route name")], you can also use [Route("[controller]")] and it will grab the name from the controller name
+
+[ApiController]
+[Route("books")]
+public class BooksController :  ControllerBase
+
