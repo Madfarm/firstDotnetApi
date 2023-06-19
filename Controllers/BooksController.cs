@@ -5,6 +5,8 @@ using Bookstore.Models;
 namespace Bookstore.Controllers;
 
 [ApiController]
+
+//The route attribute can explicity declare the url path as a string or use [controller] to pull the url path from the file name
 [Route("[controller]")]
 public class BooksController : ControllerBase
 {
@@ -18,6 +20,7 @@ public class BooksController : ControllerBase
     [HttpGet]
     public IEnumerable<Book> GetBooks()
     {
-
+        var books = repository.GetBooks();
+        return books;
     }
 }
