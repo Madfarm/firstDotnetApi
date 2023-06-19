@@ -71,3 +71,4 @@ add [Required] attribute from System.ComponentModel.DataAnnotations to make a pr
 ## Random C# notes
 When instantiating an object you can just use new() instead of new Collection<type>()
 
+DateTimeOffset.UtcNow can be used to make datetime object of right now

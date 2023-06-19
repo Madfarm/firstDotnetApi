@@ -6,7 +6,7 @@ namespace Bookstore.Models;
 public record Book
 {
     public Guid Id { get; init; }
-    public float Price { get; init; }
+    public double Price { get; init; }
     [Required]
     public string Title { get; init; } = null!;
     public DateTimeOffset DateCreated { get; init; }
