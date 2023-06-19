@@ -48,3 +48,14 @@ Swagger is awesome, can't believe it's bundled
 ## Building
 ctrl + shift + b
 
+
+## Models
+For our models, we'll use the Record type because they are built for handling immutable data and offer value equality instead of referential equality
+
+public record Item
+{
+    public Guid Id { get; init; }
+}
+
+the init keyword instead of the set keyword means the value can only be set initially and never modified
+
