@@ -72,3 +72,12 @@ add [Required] attribute from System.ComponentModel.DataAnnotations to make a pr
 When instantiating an object you can just use new() instead of new Collection<type>()
 
 DateTimeOffset.UtcNow can be used to make datetime object of right now
+
+.Where() can be called by any collection to allow for querying that collection
+
+ex:
+string[] names = { "chjris", "asphalt", "sintar" };
+names.Where(name => name == "chjris")
+
+.SingleOrDefault() returns the only element in a sequence or a default value if the sequence is empty
+- throws an exception if there is more than one element in the sequence
