@@ -4,7 +4,13 @@ using Bookstore.Models;
 
 namespace Bookstore.Repositores;
 
-public class InMemBookstoreRepository
+public interface IInMemBookstoreRepository
+{
+    Book GetBook(Guid id);
+    IEnumerable<Book> GetBooks();
+}
+
+public class InMemBookstoreRepository : IInMemBookstoreRepository
 {
     private readonly List<Book> books = new()
     {

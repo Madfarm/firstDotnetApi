@@ -87,6 +87,9 @@ NotFound() will return a Not Found status code that we can return in our api
 
 ActionResult<Type> - lets us return multiple options from a controller action method
 
+
+click the name of a class then the lightbulb to extract an interface of it
+
 ## Controllers
 first import the Mvc namespace,
 using Microsoft.AspNetCore.Mvc;
