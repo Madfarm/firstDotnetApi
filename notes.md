@@ -82,6 +82,11 @@ names.Where(name => name == "chjris")
 .SingleOrDefault() returns the only element in a sequence or a default value if the sequence is empty
 - throws an exception if there is more than one element in the sequence
 
+
+NotFound() will return a Not Found status code that we can return in our api
+
+ActionResult<Type> - lets us return multiple options from a controller action method
+
 ## Controllers
 first import the Mvc namespace,
 using Microsoft.AspNetCore.Mvc;
@@ -110,6 +115,8 @@ url params are done as follows
 public Book GetBook(int id)
 
 this is a show route
+
+
 
 
 
