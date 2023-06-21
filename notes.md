@@ -90,6 +90,9 @@ ActionResult<Type> - lets us return multiple options from a controller action me
 
 click the name of a class then the lightbulb to extract an interface of it
 
+
+> Extension Methods - allow you to extend the functionality of a class without creating a derived class or implementing an interface - they must be static methods
+
 ## Controllers
 first import the Mvc namespace,
 using Microsoft.AspNetCore.Mvc;
@@ -131,6 +134,14 @@ we do this to create decoupling and lets us modify dependencies freely - makes m
 ## Data Transfer Object
 DTO - A Dto lets not expose the actual database entity and control what data the client actually receives
 
+basically we create a second record in its own file and when we're retrieving data we're going to convert each item into that dto
+
+book => new BookDto
+{
+    Id = book.Id,
+    Title = book.Title,
+    Price = book.Price
+}
 
 
 

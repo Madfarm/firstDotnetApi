@@ -5,5 +5,5 @@ public record BookDto
 {
     public Guid Id { get; init; }
     public double Price { get; init; }
-    public string Title { get; init; } = null!;
+    public string Title { get; init; }
 }
