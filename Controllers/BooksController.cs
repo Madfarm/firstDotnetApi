@@ -23,11 +23,13 @@ public class BooksController : ControllerBase
     {
         var books = repository.GetBooks().Select(book => new BookDto
         {
-            Price = book.Price,
-            Title = book.Title
+            Id = book.Id,
+            Title = book.Title,
+            Price = book.Price
         });
         return books;
     }
+
 
     // /Books/{id} GET
     [HttpGet("{id}")]
