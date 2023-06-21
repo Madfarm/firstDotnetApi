@@ -117,6 +117,14 @@ public Book GetBook(int id)
 this is a show route
 
 
+## Dependency Injection
+When a class uses another class, the class being used is called a dependency
+
+Dependency Inversion Principle in C# - instead of having a class depdend directly on another class you can have it depend on an interface that the dependencies implement
+
+we do this to create decoupling and lets us modify dependencies freely - makes more maintainable, readable, and reusable.
+
+
 
 
 
