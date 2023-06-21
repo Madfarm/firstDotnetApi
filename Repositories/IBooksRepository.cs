@@ -2,7 +2,7 @@ using Bookstore.Models;
 
 namespace Bookstore.Repositores;
 
-public interface IInMemBookstoreRepository
+public interface IBooksRepository
 {
     Book GetBook(Guid id);
     IEnumerable<Book> GetBooks();

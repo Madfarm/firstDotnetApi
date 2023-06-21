@@ -9,11 +9,11 @@ namespace Bookstore.Controllers;
 [Route("[controller]")]
 public class BooksController : ControllerBase
 {
-    private readonly InMemBookstoreRepository repository;
+    private readonly IBooksRepository repository;
 
-    public BooksController()
+    public BooksController(IBooksRepository repository)
     {
-        repository = new InMemBookstoreRepository();
+        this.repository = repository;
     }
 
     //  /Books GET

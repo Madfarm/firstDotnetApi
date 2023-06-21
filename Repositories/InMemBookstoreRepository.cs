@@ -6,7 +6,7 @@ namespace Bookstore.Repositores;
 
 
 
-public class InMemBookstoreRepository : IInMemBookstoreRepository
+public class InMemBookstoreRepository : IBooksRepository
 {
     private readonly List<Book> books = new()
     {
