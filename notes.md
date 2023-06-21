@@ -105,5 +105,12 @@ example with a GET request:
 [HttpGet]
 public IEnumerable<Book> GetBooks()
 
+url params are done as follows
+[HttpGet("{id}")]
+public Book GetBook(int id)
+
+this is a show route
+
+
 
 
