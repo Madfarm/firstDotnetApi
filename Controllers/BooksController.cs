@@ -16,6 +16,7 @@ public class BooksController : ControllerBase
         repository = new InMemBookstoreRepository();
     }
 
+    //  /Books GET
     [HttpGet]
     public IEnumerable<Book> GetBooks()
     {
@@ -23,6 +24,7 @@ public class BooksController : ControllerBase
         return books;
     }
 
+    // /Books/{id} GET
     [HttpGet("{id}")]
     public Book GetBook(Guid id)
     {
