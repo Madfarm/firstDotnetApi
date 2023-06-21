@@ -21,12 +21,7 @@ public class BooksController : ControllerBase
     [HttpGet]
     public IEnumerable<BookDto> GetBooks()
     {
-        var books = repository.GetBooks().Select(book => new BookDto
-        {
-            Id = book.Id,
-            Title = book.Title,
-            Price = book.Price
-        });
+        var books = repository.GetBooks().Select(book => book.AsDto());
         return books;
     }
 
