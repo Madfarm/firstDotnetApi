@@ -54,7 +54,7 @@ public class BooksController : ControllerBase
 
         repository.CreateBook(book);
 
-        return CreatedAtAction(nameof(GetBook), new { id = book.Id}, book.AsDto());
+        return CreatedAtAction(nameof(GetBook), new {id = book.Id}, book.AsDto());
     }
     
 }

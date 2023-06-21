@@ -143,6 +143,8 @@ book => new BookDto
     Price = book.Price
 }
 
+ this lets us specify a legal range for values [Range(1, 10000)]
+
 
 
 
