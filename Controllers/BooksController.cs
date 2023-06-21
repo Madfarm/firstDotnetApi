@@ -28,7 +28,7 @@ public class BooksController : ControllerBase
 
     // /Books/{id} GET
     [HttpGet("{id}")]
-    public ActionResult<Book> GetBook(Guid id)
+    public ActionResult<BookDto> GetBook(Guid id)
     {
         var book = repository.GetBook(id);
 
@@ -37,7 +37,7 @@ public class BooksController : ControllerBase
             return NotFound();
         }
 
-        return book;
+        return book.AsDto();
     }
     
 }
