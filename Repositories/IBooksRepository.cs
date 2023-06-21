@@ -6,4 +6,5 @@ public interface IBooksRepository
 {
     Book GetBook(Guid id);
     IEnumerable<Book> GetBooks();
+    void CreateBook(Book book);
 }
