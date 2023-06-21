@@ -128,6 +128,10 @@ Dependency Inversion Principle in C# - instead of having a class depdend directl
 we do this to create decoupling and lets us modify dependencies freely - makes more maintainable, readable, and reusable.
 
 
+## Data Transfer Object
+DTO - A Dto lets not expose the actual database entity and control what data the client actually receives
+
+
 
 
 
