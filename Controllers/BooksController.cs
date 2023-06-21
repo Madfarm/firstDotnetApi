@@ -39,5 +39,22 @@ public class BooksController : ControllerBase
 
         return book.AsDto();
     }
+
+    // /Books POST
+    [HttpPost]
+    public ActionResult<BookDto> CreateBook(CreateBookDto bookDto)
+    {
+        Book book = new()
+        {
+            Id = Guid.NewGuid(),
+            Title = bookDto.Title,
+            Price = bookDto.Price,
+            DateCreated = DateTimeOffset.UtcNow
+        };
+
+        repository.CreateBook(book);
+
+        return CreatedAtAction(nameof(GetBook), new { id = book.Id}, book.AsDto());
+    }
     
 }
