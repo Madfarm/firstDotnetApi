@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Bookstore.Repositores;
 using Bookstore.Models;
+using Bookstore.Dtos;
 
 namespace Bookstore.Controllers;
 
@@ -18,9 +19,13 @@ public class BooksController : ControllerBase
 
     //  /Books GET
     [HttpGet]
-    public IEnumerable<Book> GetBooks()
+    public IEnumerable<BookDto> GetBooks()
     {
-        var books = repository.GetBooks();
+        var books = repository.GetBooks().Select(book => new BookDto
+        {
+            Price = book.Price,
+            Title = book.Title
+        });
         return books;
     }
 

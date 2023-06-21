@@ -1,3 +1,6 @@
+
+namespace Bookstore.Dtos;
+
 public record BookDto
 {
     public double Price { get; init; }
