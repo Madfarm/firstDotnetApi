@@ -57,6 +57,30 @@ public class BooksController : ControllerBase
         return CreatedAtAction(nameof(GetBook), new {id = book.Id}, book.AsDto());
     }
 
-    
+    // /Boks/{id} PUT
+    [HttpPut("{id}")]
+    public ActionResult UpdateBook(Guid id, UpdateBookDto bookDto)
+    {
+        var existingBook = repository.GetBook(id);
+
+        if (existingBook is null)
+        {
+            return NotFound();
+        }
+
+
+        //with is because we are using a record type
+        Book updatedBook = existingBook with
+        {
+            Title = bookDto.Title,
+            Price = bookDto.Price
+        };
+
+        repository.UpdateBook(updatedBook);
+
+        return NoContent();
+    }
+
+
     
 }
