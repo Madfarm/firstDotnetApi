@@ -30,4 +30,10 @@ public class InMemBookstoreRepository : IBooksRepository
     {
         books.Add(book);
     }
+
+    public void UpdateBook(Book book)
+    {
+        int index = books.FindIndex(item => item.Id == book.Id);
+        books[index] = book;
+    }
 }
