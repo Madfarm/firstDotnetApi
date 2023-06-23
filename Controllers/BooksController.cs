@@ -81,6 +81,21 @@ public class BooksController : ControllerBase
         return NoContent();
     }
 
+    [HttpDelete("{id}")]
+    public ActionResult DeleteBook(Guid id)
+    {
+        var existingBook =  repository.GetBook(id);
+
+        if (existingBook is null)
+        {
+            return NotFound();
+        }
+
+        repository.DeleteBook(id);
+
+        return NoContent();
+    }
+
 
     
 }
