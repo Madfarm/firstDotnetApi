@@ -36,4 +36,9 @@ public class InMemBookstoreRepository : IBooksRepository
         int index = books.FindIndex(item => item.Id == book.Id);
         books[index] = book;
     }
+
+    public void DeleteBook(Book book)
+    {
+        throw new NotImplementedException();
+    }
 }
