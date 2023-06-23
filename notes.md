@@ -93,6 +93,8 @@ click the name of a class then the lightbulb to extract an interface of it
 
 > Extension Methods - allow you to extend the functionality of a class without creating a derived class or implementing an interface - they must be static methods
 
+with expression - lets you create a copy of a record, structure, or anonymous type with added modifications if desired;
+
 ## Controllers
 first import the Mvc namespace,
 using Microsoft.AspNetCore.Mvc;

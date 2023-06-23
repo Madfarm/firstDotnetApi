@@ -69,7 +69,7 @@ public class BooksController : ControllerBase
         }
 
 
-        //with is because we are using a record type
+        //with is a superpower of the record type
         Book updatedBook = existingBook with
         {
             Title = bookDto.Title,
