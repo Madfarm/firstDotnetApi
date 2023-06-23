@@ -124,7 +124,27 @@ public Book GetBook(int id)
 
 this is a show route
 
+return ActionResult from each of these routes
 
+/////////////////////////////////////////////
+Full Crud Example
+
+[HttpGet]
+public IEnumerable GetBooks()
+
+[HttpGet("{id}")]
+public ActionResult<BookDto> GetBook(type id)
+
+[HttpPost]
+public ActionResult<BookDto> CreateBook(CreatedDto placeholder)
+
+[HttpPut("{id})]
+public ActionResult UpdateBook(type id, UpdateDto placeholder)
+
+[HttpDelete("{id}")]
+public ActionResult DeleteBook(type id)
+
+/////////////////////////////////////////////////////
 ## Dependency Injection
 When a class uses another class, the class being used is called a dependency
 

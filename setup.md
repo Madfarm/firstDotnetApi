@@ -42,3 +42,10 @@ clean up the starter files by deleting,
 WeatherForecast.cs and WeatherForecastController.cs
 
 
+Add your model folder and make models in there
+
+Make a controller folder and create the controllers
+
+## MongoDB Integration
+dotnet add package MongoDB.Driver
+

@@ -57,7 +57,7 @@ public class BooksController : ControllerBase
         return CreatedAtAction(nameof(GetBook), new {id = book.Id}, book.AsDto());
     }
 
-    // /Boks/{id} PUT
+    // /Books/{id} PUT
     [HttpPut("{id}")]
     public ActionResult UpdateBook(Guid id, UpdateBookDto bookDto)
     {
