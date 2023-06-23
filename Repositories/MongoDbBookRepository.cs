@@ -1,12 +1,17 @@
 using Bookstore.Models;
+using MongoDB.Driver;
 
 namespace Bookstore.Repositores;
 
 public class MongoDbBookRepository : IBooksRepository
 {
-    public MongoDbBookRepository()
+    private const string databaseName = "BookstoreTest";
+    private const string collectionName = "Books";
+    private readonly IMongoCollection<Book> booksCollection;
+    public MongoDbBookRepository(IMongoClient mongoClient)
     {
-        
+        IMongoDatabase database = mongoClient.GetDatabase(databaseName);
+        booksCollection = database.GetCollection<Book>(collectionName);
     }
     public void CreateBook(Book book)
     {

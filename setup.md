@@ -49,3 +49,25 @@ Make a controller folder and create the controllers
 ## MongoDB Integration
 dotnet add package MongoDB.Driver
 
+make a repository file for the database with a class that implements the respository interface
+
+then pass a IMongoClient into the constructor
+create a string for the collection and database names
+then create a IMongoCollection to store the collection:
+
+private const string databaseName = "whatever database name";
+private const string collectionName = "collection name";
+private readonly IMongoCollection<Model name> placeholderCollection;
+
+public ConsctructorName(IMongoClient mongoClient)
+{
+    IMongoDatabase database = mongoClient.GetDatabase(databaseName);
+    placeholderCollection = database.GetCollection<Model name>(collectionName);
+}
+
+
+now with that setup we need to grab the database and collection inside the constructor
+
+public 
+
+
